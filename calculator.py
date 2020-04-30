@@ -15,28 +15,43 @@ def calculator():
         math_equation = input("Enter your equation: ").split(" ")
 
         action = str(math_equation[0])
-        num1 = float(math_equation[1])
-        num2 = float(math_equation[2])
-        #num3 = float(math_equation[3])
 
-        if action == '+':
+        if action == "q" or action == "quit":
+            break
+
+        elif action == '+':
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
             print(add(num1, num2))
         elif action == '-':
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
             print(subtract(num1, num2))
         elif action == '*':
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
             print(multiply(num1, num2))
         elif action == '/':
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
             print(divide(num1, num2))
         elif action == 'square':
+            num1 = float(math_equation[1])
             print(square(num1))
         elif action == 'cube':
-            return num1 * num1 * num1
-        elif action == 'power':
-            return num1 ** num2
+            num1 = float(math_equation[1])
+            print(cube(num1))
+        elif action == 'pow':
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
+            print(power(num1, num2))
         elif action == 'mod':
-            return num1 % num2
-        #else action.lower() == "q" or action == "quit":
-        #    break
+            num1 = float(math_equation[1])
+            num2 = float(math_equation[2])
+            print(mod(num1, num2))
+        else:
+            action == "q" or action == "quit"
+            break
 
     return "not working"
 
